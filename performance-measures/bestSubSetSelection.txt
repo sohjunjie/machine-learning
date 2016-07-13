@@ -1,0 +1,9 @@
+PSUEDO CODE
+
+Initialize: Out_of_sample_error = NULL
+    Break X and Y into test and training sets
+for i in range(number of columns in X):
+    for each subset of X having i+1 columns:
+        fit ordinary least squares model
+    Out_of_sample_error.append(least error amoung subsets containing i+1 columns)
+Pick the subset corresponding to least overall error

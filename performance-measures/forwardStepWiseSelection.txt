@@ -1,0 +1,11 @@
+PSUEDO CODE
+
+Initialize: ColumnList = NULL
+    Out-of-sample-error = NULL
+    Break X and Y into test and training sets
+For number of column in X:
+    For each trialColumn (column not in ColumnList):
+        Build submatrix of X using ColumnList + trialColumn
+        Train OLS on submatrix and store RSS Error on test data
+    ColumnList.append(trialColumn that minimizes RSS Error)
+    Out-of-sample-error.append(minimum RSS Error)
